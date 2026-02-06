@@ -45,7 +45,11 @@ export default function Login() {
         <Text style={styles.botaoTexto}>Entrar →</Text>
       </TouchableOpacity>
 
-
+      <View style={styles.separador}>
+        <View style={styles.linha} />
+        <Text style={styles.ou}>Ou entre com</Text>
+        <View style={styles.linha} />
+      </View>
     </View>
   );
 }
@@ -133,5 +137,11 @@ botaoTexto: {
   color: "#FFFFFF",
   fontSize: 16,
   fontWeight: "bold",
-}
+},
+
+separador: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  }
 });
