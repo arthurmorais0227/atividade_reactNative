@@ -5,13 +5,13 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  Image,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function Login() {
   return (
     <View style={styles.container}>
-      
       <View style={styles.iconBox}>
         <Ionicons name="school" size={36} color="#7C3AED" />
       </View>
@@ -50,6 +50,24 @@ export default function Login() {
         <Text style={styles.ou}>Ou entre com</Text>
         <View style={styles.linha} />
       </View>
+
+      <View style={styles.social}>
+        <TouchableOpacity style={styles.socialBtn}>
+          <Ionicons name="logo-google" size={22} color="#DB4437" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.socialBtn}>
+          <Ionicons name="logo-facebook" size={22} color="#1877F2" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.socialBtn}>
+          <Ionicons name="logo-instagram" size={22} color="#E1306C" />
+        </TouchableOpacity>
+      </View>
+
+      <Text style={styles.footer}>
+        Não tem uma conta? <Text style={styles.cadastrar}>Cadastre-se</Text>
+      </Text>
     </View>
   );
 }
@@ -119,29 +137,71 @@ const styles = StyleSheet.create({
   },
 
   botao: {
-  backgroundColor: "#7C3AED",
-  height: 54,
-  borderRadius: 14,
-  justifyContent: "center",
-  alignItems: "center",
-  marginTop: 20,
-  marginBottom: 30,
-  shadowColor: "#7C3AED",
-  shadowOpacity: 0.4,
-  shadowRadius: 10,
-  elevation: 6,
-  color: '#FFFFFF'
-},
+    backgroundColor: "#7C3AED",
+    height: 54,
+    borderRadius: 14,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+    marginBottom: 30,
+    shadowColor: "#7C3AED",
+    shadowOpacity: 0.4,
+    shadowRadius: 10,
+    elevation: 6,
+    color: "#FFFFFF",
+  },
 
-botaoTexto: {
-  color: "#FFFFFF",
-  fontSize: 16,
-  fontWeight: "bold",
-},
+  botaoTexto: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
 
-separador: {
+  separador: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 20,
-  }
+  },
+
+  linha: {
+  flex: 1,
+  height: 1,
+  backgroundColor: "#7C3AED",
+},
+
+ou: {
+  marginHorizontal: 12,
+  color: "#7C3AED",
+  fontSize: 14,
+},
+
+  social: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 14,
+    marginBottom: 24,
+  },
+
+  socialBtn: {
+    width: 48,
+    height: 48,
+    borderRadius: 12,
+    backgroundColor: "#FFFFFF",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+
+  footer: {
+    textAlign: "center",
+    color: "#6B7280",
+  },
+
+  cadastrar: {
+    color: "#7C3AED",
+    fontWeight: "bold",
+  },
 });
