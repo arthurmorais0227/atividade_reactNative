@@ -5,15 +5,15 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  Image,
 } from "react-native";
+
 import { Ionicons } from "@expo/vector-icons";
 
 export default function Login() {
   return (
     <View style={styles.container}>
       <View style={styles.iconBox}>
-        <Ionicons name="school" size={36} color="#7C3AED" />
+        <Ionicons name="school" size={45} color="#7C3AED" />
       </View>
 
       <Text style={styles.titulo}>Bem-vindo de volta</Text>
@@ -39,6 +39,7 @@ export default function Login() {
           secureTextEntry={true}
           style={styles.input}
         />
+        <Ionicons name="eye" size={20} color="#9CA3AF"/>
       </View>
 
       <View style={styles.esqueci}>
@@ -80,36 +81,37 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FAFAFA",
-    padding: 24,
+    paddingLeft: 24,
+    paddingRight: 24,
+    paddingBottom: 16,
     justifyContent: "center",
   },
 
   iconBox: {
-    width: 64,
-    height: 64,
+    width: 103,
+    height: 103,
     borderRadius: 16,
     backgroundColor: "#FFFFFF",
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 20,
     shadowColor: "#7C3AED",
     shadowOpacity: 0.2,
     shadowRadius: 10,
     elevation: 6,
+    marginBottom: 50
   },
 
   titulo: {
     fontSize: 26,
     fontWeight: "bold",
     color: "#111827",
-    textAlign: "center",
+    marginBottom: 5
   },
 
   subtitulo: {
     fontSize: 15,
     color: "#6B7280",
-    textAlign: "center",
     marginBottom: 30,
   },
 
