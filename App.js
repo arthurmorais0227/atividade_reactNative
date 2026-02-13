@@ -41,6 +41,10 @@ export default function Login() {
         />
       </View>
 
+      <View style={styles.esqueci}>
+        <Text style={styles.esqueciTexto}>Esqueci minha senha</Text>
+      </View>
+
       <TouchableOpacity style={styles.botao}>
         <Text style={styles.botaoTexto}>Entrar →</Text>
       </TouchableOpacity>
@@ -53,15 +57,15 @@ export default function Login() {
 
       <View style={styles.social}>
         <TouchableOpacity style={styles.socialBtn}>
-          <Ionicons name="logo-google" size={22} color="#DB4437" />
+          <Ionicons name="logo-google" size={22} color="#7C3AED" />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.socialBtn}>
-          <Ionicons name="logo-facebook" size={22} color="#1877F2" />
+          <Ionicons name="logo-facebook" size={22} color="#7C3AED" />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.socialBtn}>
-          <Ionicons name="logo-instagram" size={22} color="#E1306C" />
+          <Ionicons name="logo-instagram" size={22} color="#7C3AED" />
         </TouchableOpacity>
       </View>
 
@@ -136,6 +140,15 @@ const styles = StyleSheet.create({
     color: "#111827",
   },
 
+  esqueci: {
+    alignItems: "flex-end",
+  },
+
+  esqueciTexto: {
+    color: "#7C3AED",
+    fontWeight: "bold"
+  },
+
   botao: {
     backgroundColor: "#7C3AED",
     height: 54,
@@ -164,16 +177,16 @@ const styles = StyleSheet.create({
   },
 
   linha: {
-  flex: 1,
-  height: 1,
-  backgroundColor: "#7C3AED",
-},
+    flex: 1,
+    height: 1,
+    backgroundColor: "#7C3AED",
+  },
 
-ou: {
-  marginHorizontal: 12,
-  color: "#7C3AED",
-  fontSize: 14,
-},
+  ou: {
+    marginHorizontal: 12,
+    color: "#7C3AED",
+    fontSize: 14,
+  },
 
   social: {
     flexDirection: "row",
@@ -192,7 +205,7 @@ ou: {
     shadowRadius: 6,
     elevation: 3,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 
   footer: {
